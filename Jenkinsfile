@@ -1,9 +1,11 @@
 pipeline {
     agent any
     stages {
-    stage('regularStage'){
-      steps{
-        sh "echo hey"
+    stage('Git checkout'){
+      steps {
+        git branch: 'master',
+        credentialsId: 'test',
+        url: 'https://github.com/Nadeem6677/Project1'
       }
     }
     stage('dockerStage') {
