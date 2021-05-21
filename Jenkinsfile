@@ -15,10 +15,6 @@ pipeline {
             dockerfile {
             filename 'Dockerfile'
         }
-        steps {
-            [...]
         }
-}
     }
-    [...]
 }
