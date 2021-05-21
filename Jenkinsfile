@@ -10,8 +10,6 @@ pipeline {
       agent {
         dockerfile {
           filename 'Dockerfile'
-          dir 'test'
-          label 'Test'
         }
       }
       steps {
