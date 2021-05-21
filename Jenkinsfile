@@ -3,7 +3,7 @@ pipeline {
     stages {
     stage('regularStage'){
       steps{
-        sh 'time'
+        sh "echo hey"
       }
     }
     stage('dockerStage') {
@@ -15,7 +15,7 @@ pipeline {
         }
       }
       steps {
-          sh 'date'
+          sh "echo completed"
       }
     }
   }
