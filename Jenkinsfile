@@ -1,10 +1,9 @@
 pipeline {
-agent {
+    agent {
     dockerfile {
         filename 'Dockerfile'
         dir 'build'
-        label 'test'
-        args '-v /tmp:/tmp'
+        label 'my-defined-label'
     }
 }
 }
