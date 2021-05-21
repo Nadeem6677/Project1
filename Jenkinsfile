@@ -1,20 +1,22 @@
 pipeline {
     agent none
-    stage ('Checkout') {
-        agent any
-        steps {
-            git(
-                url: 'https://github.com/Nadeem6677/Project1',
-                credentialsId: 'test',
-                branch: "master"
-            )
-        }
+    stages {
+    stage('regularStage'){
+      steps{
+        sh 'some shell command to run on the node'
+      }
     }
-    stage ('Build') {
-        agent {
-            dockerfile {
-            filename 'Dockerfile'
+    stage('dockerStage') {
+      agent {
+        dockerfile {
+          filename 'Dockerfile'
+          dir 'test'
+          label 'Test'
         }
-        }
+      }
+      steps {
+          sh 'date'
+      }
     }
+  }
 }
