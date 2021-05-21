@@ -3,7 +3,7 @@ pipeline {
     stages {
     stage('regularStage'){
       steps{
-        sh 'some shell command to run on the node'
+        sh 'time'
       }
     }
     stage('dockerStage') {
