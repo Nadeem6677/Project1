@@ -1,3 +1,2 @@
-FROM openjdk:8-jdk-alpine
-RUN apk add --no-cache curl tar bash procps
-CMD ["date"]
+FROM mcr.microsoft.com/dotnet/sdk:5.0
+
